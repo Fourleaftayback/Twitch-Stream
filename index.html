@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="FCC Twitch API challenge">
+  <meta name="author" content="Jay Shong">
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="Twitch Stream API Code Challenge">
+  <title>Twitch Stream API Challenge</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center">Twitch Stream</h1>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <input type="text" class="form-control" placeholder="search" id="input">
+        <button type="button" class="btn btn-primary" id="btn-all">All</button>
+        <button type="button" class="btn btn-primary" id="btn-online">Online</button>
+        <button type="button" class="btn btn-primary" id="btn-offline">Offline</button>
+        <div class="list">
+          <ul class="text-left" id="online">
+          </ul>
+          <ul class="text-left" id="offline">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('btn-all').addEventListener('click', displayBoth);
+    document.getElementById('btn-online').addEventListener('click', displayOnline);
+    document.getElementById('btn-offline').addEventListener('click', displayOffline);
+    document.getElementById('input').addEventListener('keyup', searchList);
+  </script>
+
+</body>
+
+</html>
